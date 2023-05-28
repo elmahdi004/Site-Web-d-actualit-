@@ -1,0 +1,324 @@
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+*{
+   box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
+    /* min-width: fit-content; */
+}
+:root{
+--main-color:#00ADB5;
+--sec-color:#393E46;
+--third-color:#222831; 
+--master-gray:#f7f7f7;
+}
+
+    .container{
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    @media (min-width:768px){
+        .container{
+            width: 760px;
+        }
+    }
+    @media (min-width:950px){
+        .container{
+            width: 940px;
+        }
+    }
+    @media (min-width:1200px){
+        .container{
+            width: 1160px;
+        }
+    }
+
+/* end  */
+/* start nav  */
+
+.container .nav{
+    display: grid;
+    grid-template-columns: repeat(10,minmax(100px,1fr));
+    grid-template-rows: 80px;
+    position: relative;
+}
+.nav .logo{
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.logo h3{
+color: var(--sec-color);
+}
+.logo span{
+color: var(--main-color);
+}
+.container .nav h5{
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    color: var(--third-color);
+    font-size: 20px;
+    font-weight: 400;
+}
+.container .nav .menu{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container .nav .menu i{
+    font-size: 18px;
+    color: var(--main-color);
+    transition: 0.6s;
+}
+.container .nav .menu i:hover{
+ color: var(--sec-color);
+}
+.container .nav .user{
+    background-color: var(--third-color);
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    padding: 3px;
+    top: 65px;
+    right: 0;
+    border: 1px solid var(--main-color);
+}
+.container .nav .user.active{
+    display: none;
+}
+.container .nav .user .close{
+position: absolute;
+    right: 0;
+    top: 8px;
+}
+.container .nav .user .close i{
+    color: var(--master-gray);
+    font-size: 15px;
+    transition: 0.6s;
+}
+.container .nav .user .close i:hover{
+    color: var(--main-color);
+}
+.container .nav .user .welcome{
+    color: var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.container .nav .user .flname{
+    margin-left: 5px;
+    color: var(--master-gray);
+    margin-top: -7px;
+}
+.container .nav .user a{
+    margin-left: 10px;
+    font-size: 13px;
+    text-decoration: none;
+}
+.container .nav .user a i{
+    color: var(--master-gray);
+    margin-right: 10px;
+}
+.container .nav .user a span{
+    font-size: 14px;
+    color: var(--main-color);
+}
+/* --- start add ------  */
+.container .nav .add{
+    background-color: var(--third-color);
+    z-index: 2;
+    width: 330px;
+    height: 400px;
+    color: var(--main-color);
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border: 1px solid var(--main-color);
+}
+.container .nav .add.active{
+    display: none;
+}
+.container .nav .add form{
+    margin: 30px 10px 0 10px;
+}
+.container .nav .add form .close{
+    position: absolute;
+    right: 0;
+    margin: 0 10px;
+    top: 10px;
+}
+.container .nav .add form .close i{
+    color: var(--main-color);
+    font-size: 20px;
+}
+.container .nav .add form input,.container .nav .add form textarea{
+    margin-bottom: 10px;
+}
+.container .nav .add input:last-child{
+    margin-top: 10px;
+    width: 100px;
+    padding: 3px;
+    background: var(--third-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-size: 15px;
+    font-weight: 100;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.container .nav .add input:last-child:hover{
+    background-color: var(--main-color);
+    color: var(--third-color);
+}
+ /* end 
+   */
+ /* ----- start dashboard -----  */
+ .dashboard,.logout{
+    margin-top: 10px;
+ }
+ .dashboard a,.logout a{
+    color: var(--main-color);
+    font-size: 13px;
+    text-transform: none;
+ }
+ /* end dashboard  */
+ /* ----- Start Search ------  */
+ .container .nav .user .search{
+    margin-top: 10px;
+ }
+ .container .nav .user .search a{
+    color: var(--main-color);
+    font-size: 13px;
+    text-transform: none;
+ }
+ .search-section{
+    border: 1px solid var(--main-color);
+    background-color: var(--third-color);
+    color: var(--main-color);
+    width: 240px;
+    height: 115px;
+    z-index: 2;
+    padding: 10px;
+    position: absolute;
+    top: 335px;
+    right: -110px;
+    transform: translateX(-50%);
+ }
+ .search-section.active{
+    display: none;
+ }
+ .search-section .close{
+    position: absolute;
+    right: 8px;
+    top: 7px;
+    font-size: 13px;
+ } .search-section .close a{
+    color: var(--main-color);
+ }
+ .search-section form input:last-child{
+    margin-top: 10px;
+    width: 100px;
+    padding: 3px;
+    background: var(--third-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-size: 15px;
+    font-weight: 100;
+    transition: 0.6s;
+    cursor: pointer;
+ }
+ .search-section form input:first-child{
+    margin-top: 5px;
+ }
+ .search-section form input:last-child:hover{
+    background-color: var(--main-color);
+    color: var(--third-color);
+ }
+ /* end Search  */
+/* --- start blogs ----  */
+.blogs{
+    background-color: var(--main-color);
+    min-height: 500px;
+}
+.blogs .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.blog-child{
+    background-color: var(--third-color);
+    width: 30%;
+    margin: 10px;
+    cursor: pointer;
+    height: 250px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+@media(max-width:767px){
+    .blogs .container{
+    flex-direction: column;
+}
+.blogs .blog-child{
+    width: 100%;
+    margin: 10px auto;
+}
+}
+.blog-child .image{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+.blog-child .image::before{
+    content: "SEE MORE";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: var(--main-color);
+    text-align: center;
+    color: var(--third-color);
+    bottom: -32px;
+    padding: 6px 0;
+    transition: 0.6s;
+}
+.blog-child .image:hover::before{
+    bottom: 0;
+}
+.blog-child .image img{
+    max-width: 100%;
+    min-width: 60%;
+}
+.blog-child .text{
+    overflow: hidden;
+}
+.blog-child .text h3{
+    text-align: center;
+    color: var(--main-color);
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.blog-child .text p{
+    line-height: 1.6;
+    color: var(--main-color);
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0 6px;
+}
+
+/* end Blogs  */

@@ -1,0 +1,122 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+   box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+}
+:root{
+--main-color:#00ADB5;
+--sec-color:#393E46;
+--third-color:#222831; 
+--main-box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px
+}
+.login{
+width: 30%;
+height: 400px;
+background-color: white;
+border-radius: 7px;
+box-shadow: var(--main-box-shadow);
+margin-top: 60px;
+display: grid;
+justify-content: center;
+position: relative;
+}
+@media(max-width:767px){
+    .login{
+        width: 70%;
+    }
+}
+.logo{
+    position: absolute;
+    top: -35px;
+    margin: 15px;
+    font-size: 18px;
+}
+.logo h3{
+    color: var(--sec-color);
+}
+.logo span{
+    color: var(--main-color);
+
+}
+.login .welcome{
+    margin-top: 40px;
+    margin-left: 30px;
+    color: var(--sec-color);
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -90px;
+}
+.login form label,.login form input{
+    margin-bottom: 20px;
+}
+.login form input{
+    padding: 4px 0;
+}
+.login form input:focus{
+    outline: none;
+}
+.login form a{
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--sec-color);
+    font-size: 14px;
+    transition: 0.8s;
+}
+.login form button{
+    padding: 4px 0;
+    border: 1px solid #e2dddd;
+    border-radius: 5px;
+    color: var(--sec-color);
+    background: var(--main-color);
+}
+.login form button:hover{
+    background-color: white;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: 0.8s;
+}
+.login form .or{
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+.login form .or span{
+margin: 5px 0;
+color: var(--third-color);
+position: relative;
+}
+.login form .or span::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: var(--third-color);
+    left: -102px;
+    bottom: 8px;
+}
+
+.login form .or span::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: var(--third-color);
+    left: 18px;
+    bottom: 8px;
+}
+.login form .or i{
+    color: var(--main-color);
+    cursor: pointer;
+}
