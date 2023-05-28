@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev Projet</title>
+    <link rel="stylesheet" href="design/signupStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="signup">
+        <div class="logo">
+            <h3>E<span>bellaziz</span>
+            </h3>
+        </div>
+        <div class="text">
+            <h3>registration</h3>
+            <p>we are so happy to join us !</p>
+        </div>
+        <form action="back end/signup.php" method="POST">
+            <label for="first_name">first name:</label>
+            <br>
+            <input type="text" name="first_name" id="first_name" placeholder="Elmahdi" required>
+            <br><br>
+            <label for="last_name">last name:</label>
+            <br>
+            <input type="text" name="last_name" id="last_name" placeholder="Bellaziz" required>
+            <br><br>
+            <label for="user_name">username:</label>
+            <br>
+            <input type="text" name="username" id="username" placeholder="Elmahdixxx" required>
+            <br><br>
+            <label for="mail">mail:</label>
+            <br>
+            <input type="text" name="mail" id="mail" placeholder="Exemple@mail.com" required>
+            <br><br>
+            <label for="password">password:</label>
+            <br>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+            <br><br>
+            <label for="retry password">retry password:</label>
+            <br>
+            <input type="password" name="retry_password" id="retry_password" placeholder="Retry Your Password" required>
+            <br><br>
+            <div class="error"></div>
+            <br><br>
+            <input id="signup" type="submit" value="Sign Up">
+            <br><br>
+        </form>
+    </div>
+    <script src="signup_valid.js"></script>
+</body>
+</html>
